@@ -1,0 +1,32 @@
+html{
+  background-image: url("http://at41coopersquare.github.io/CooperUnionLogo.gif");
+   background-color: blue ;
+   background-size: 2px 2500px;
+   float: right;
+   text-align: center;
+
+
+}
+
+body{
+  font-size: 50px;
+  color: white;
+  text-transform: uppercase;
+  font-family: Helvetica,sans-serif;
+  letter-spacing: 5px;
+  padding: 25px;
+  text-shadow:0 2px black;
+  border-radius:5px;cursor:vertical-text;
+  margin: 10px;
+}
+
+body p {
+  text-decoration: underline;
+  font-variant: small-caps;
+  text-align: justify;
+}
+
+body h1 {
+  font-size: 18px;
+  padding: 10px;
+}

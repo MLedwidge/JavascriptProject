@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+
+
+
+      $.getJSON("http://cooper-union-search-proxy.herokuapp.com/twitter/search/savecooperunion?count=1000", function(response){
+
+        console.log("There are " + response.statuses.length + " tweets");
+        console.log(response)
+
+        $("body").append("<h1>"+response.statuses[0].text+"</h1>")
+        $("body").append("<h1>"+response.statuses[0].created_at+"</h1>")
+
+        $("body").append("<h1>" +response.statuses[0].favorite_count+"</h1>")
+        $("body").append("<h1>" +response.statuses[0].favorite_count+"</h1>")
+
+
+        $("body").append("<h1>"+response.statuses[1].text+"</h1>")
+        $("body").append("<h1> "+response.statuses.user.profile_image_url+"</h1>")
+
+
+
+        $("body").append("<h1>"+response.statuses[2].text+"</h1>")
+        $("body").append("<h1>"+response.statuses[2].created_at+"</h1>")
+        $("body").append("<h1>"+response.statuses[i].text+"</h1>")
+        $("body").append("<h1>"+response.statuses[4].text+"</h1>")
+        //console.log(response.search_metadata, response.statuses[0].entities.urls[0].url);
+        $
+        //var tweet_data = {
+          //"search_metadata": {
+        //       "completed_in": 0.01,
+        //       "count":100
+        //   },
+        //   "statuses":[
+        //     {
+        //       "created_at":"Yesterday",
+        //       "text":"this is a tweet!"
+        //     },
+        //     {
+        //       "created_at":"Today",
+        //       "text":"this is another tweet!"
+        //     }
+        //   ]
+        // };
+        //
+        // console.log(response.statuses[1].text)
+        // console.log(response.statuses[2].text)
+
+
+        for(var i=0; i<response.statuses.length; i++) {
+          // console.log(response.statuses[i].text);
+          //
+          // var retweet_count = response.statuses[i].retweet_count;
+          // var favorite_count = response.statuses[i].favorite_count;
+          //
+          // if(retweet_count > 0) {
+          //   // console.log("This tweet was retweeted!");
+          // }
+          //
+          // if(favorite_count > 0) {
+          //   // console.log("This tweet was favorited!");
+          // }
+          //
+          // if((retweet_count > 0) && (favorite_count>0)) {
+          //   $("body").append("<h1>"+response.statuses[i].text+"</h1>");
+          // } else {
+          //   console.log("boring tweet " + response.statuses[i].text);
+          // }
+          //
+
+        }
+
+
+
+      });
+    </script>
+  </head>
+  <body>
+<p>  ------- Here are the latest tweets on stuff that should relate to making cooper free (again) -----</p>
+
+  </body>
+</html>
